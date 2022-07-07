@@ -24,10 +24,12 @@ public class Professional {
   @Column
   private String speciality;
 
-  Professional(String name, String speciality) {
+  Professional(Integer id, String name, String speciality) {
+    this.id = id;
     this.name = name;
     this.speciality = speciality;
   }
+
 
   public Integer getId() {
     return id;
@@ -52,4 +54,5 @@ public class Professional {
   public void setSpeciality(String speciality) {
     this.speciality = speciality;
   }
+
 }

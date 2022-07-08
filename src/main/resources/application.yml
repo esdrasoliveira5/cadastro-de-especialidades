@@ -3,10 +3,12 @@ server:
 
 spring:
   datasource:
-    url: dbc:h2:mem:speciality_database
+    url: jdbc:h2:mem:speciality_database
     username: speciality-app
     password: speciality-app!
     driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
 
 logging:
   file:

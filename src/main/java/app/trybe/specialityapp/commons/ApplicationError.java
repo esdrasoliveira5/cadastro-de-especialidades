@@ -12,7 +12,8 @@ public class ApplicationError {
   private String message;
 
   public ApplicationError(Status status, String message) {
-
+    this.status = status;
+    this.message = message;
   }
 
   public String getMessage() {

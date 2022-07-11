@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Professional {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
   @Column
@@ -29,6 +29,8 @@ public class Professional {
     this.name = name;
     this.speciality = speciality;
   }
+
+  Professional() {}
 
 
   public Integer getId() {

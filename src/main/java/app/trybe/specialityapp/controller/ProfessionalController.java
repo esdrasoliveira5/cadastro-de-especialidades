@@ -20,19 +20,21 @@ import org.springframework.stereotype.Controller;
 
 
 
+
 /**
  * Professional Controller.
  */
 @Controller
-@Path("/api/professional")
+@Path("/professional")
 public class ProfessionalController {
   @Autowired
-  private ProfessionalService service;
+  ProfessionalService service;
 
   /**
    * Get All.
    */
   @GET
+  @Path("/all")
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.APPLICATION_JSON)
   public Response findAll() {
@@ -51,28 +53,34 @@ public class ProfessionalController {
    * Create .
    */
   @POST
+  @Path("/add")
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.APPLICATION_JSON)
   public Response insert(Professional data) {
-    Professional professional = service.createProfessional(data);
-    return Response.status(201).entity(professional).build();
+    if (data.getId() != null) {
+      return Response.status(400).entity(new ApplicationError(Response.Status.BAD_REQUEST,
+          "Não é permitido inserir novos registros com ID explícito")).build();
+    } else {
+      service.createProfessional(data);
+      return Response.status(201).entity("Inserido").build();
+    }
   }
 
   /**
    * Update.
    */
   @PUT
-  @Path("/{id}")
+  @Path("/edit/{id}")
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.APPLICATION_JSON)
   public Response edit(@PathParam("id") Integer id, Professional data) {
     try {
       Professional professional = service.editProfessional(id, data);
-      return Response.ok(professional).build();
+      return Response.ok("ID [" + id + "] atualizado").build();
     } catch (NoSuchElementException e) {
       return Response.status(404)
           .entity(
-              new ApplicationError(Response.Status.NOT_FOUND, "Nenhum registro foi encontrado!"))
+              new ApplicationError(Response.Status.NOT_FOUND, "Não é possível editar, o ID informado não existe"))
           .build();
     }
   }
@@ -81,17 +89,17 @@ public class ProfessionalController {
    * Delete.
    */
   @DELETE
-  @Path("/{id}")
+  @Path("/delete/{id}")
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.APPLICATION_JSON)
   public Response delete(@PathParam("id") Integer id) {
     try {
       service.deleteProfessional(id);
-      return Response.ok().build();
+      return Response.ok("ID [" + id + "] removido").build();
     } catch (NoSuchElementException e) {
       return Response.status(404)
           .entity(
-              new ApplicationError(Response.Status.NOT_FOUND, "Nenhum registro foi encontrado!"))
+              new ApplicationError(Response.Status.NOT_FOUND, "Não é possível deletar, o ID informado não existe"))
           .build();
     }
   }

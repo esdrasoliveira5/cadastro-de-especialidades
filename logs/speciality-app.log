@@ -311,3 +311,43 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2022-07-11 11:21:45.678  INFO 32092 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
 2022-07-11 11:21:45.881  INFO 32092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2022-07-11 11:21:45.884  INFO 32092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-07-11 13:21:20.873  INFO 58252 --- [main] a.t.s.c.ProfessionalControllerTest       : Starting ProfessionalControllerTest using Java 11.0.15 on esdras with PID 58252 (started by esdras in /home/esdras/eclipse-workspace/acc-java-04-exercises-cadastro-especialidades)
+2022-07-11 13:21:20.874  INFO 58252 --- [main] a.t.s.c.ProfessionalControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2022-07-11 13:21:21.041  INFO 58252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-11 13:21:21.046  INFO 58252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 1 JPA repository interfaces.
+2022-07-11 13:21:21.158  INFO 58252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-07-11 13:21:21.160  INFO 58252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-07-11 13:21:21.167  INFO 58252 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-11 13:21:21.171  INFO 58252 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-07-11 13:21:21.195  INFO 58252 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-11 13:21:21.195  INFO 58252 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-11 13:21:21.425  WARN 58252 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-11 13:21:21.685  INFO 58252 --- [main] a.t.s.c.ProfessionalControllerTest       : Started ProfessionalControllerTest in 0.951 seconds (JVM running for 3.341)
+2022-07-11 13:21:21.713  INFO 58252 --- [main] estContainerFactory$GrizzlyTestContainer : Creating GrizzlyTestContainer configured at the base URI http://localhost:9998/
+2022-07-11 13:21:22.143  INFO 58252 --- [main] o.g.grizzly.http.server.NetworkListener  : Started listener bound to [localhost:9998]
+2022-07-11 13:21:22.144  INFO 58252 --- [main] o.g.grizzly.http.server.HttpServer       : [HttpServer] Started.
+2022-07-11 13:21:22.593  INFO 58252 --- [main] o.g.grizzly.http.server.NetworkListener  : Stopped listener bound to [localhost:9998]
+2022-07-11 13:21:22.614  INFO 58252 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-11 13:21:22.615  INFO 58252 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-07-11 13:21:22.819  INFO 58252 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-07-11 13:21:22.822  INFO 58252 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-07-11 13:21:50.409  INFO 58388 --- [main] a.t.s.c.ProfessionalControllerTest       : Starting ProfessionalControllerTest using Java 11.0.15 on esdras with PID 58388 (started by esdras in /home/esdras/eclipse-workspace/acc-java-04-exercises-cadastro-especialidades)
+2022-07-11 13:21:50.410  INFO 58388 --- [main] a.t.s.c.ProfessionalControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2022-07-11 13:21:50.561  INFO 58388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-11 13:21:50.568  INFO 58388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interfaces.
+2022-07-11 13:21:50.665  INFO 58388 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-07-11 13:21:50.667  INFO 58388 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-07-11 13:21:50.674  INFO 58388 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-11 13:21:50.677  INFO 58388 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-07-11 13:21:50.698  INFO 58388 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-11 13:21:50.699  INFO 58388 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-11 13:21:50.909  WARN 58388 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-11 13:21:51.141  INFO 58388 --- [main] a.t.s.c.ProfessionalControllerTest       : Started ProfessionalControllerTest in 0.876 seconds (JVM running for 3.272)
+2022-07-11 13:21:51.183  INFO 58388 --- [main] estContainerFactory$GrizzlyTestContainer : Creating GrizzlyTestContainer configured at the base URI http://localhost:9998/
+2022-07-11 13:21:51.578  INFO 58388 --- [main] o.g.grizzly.http.server.NetworkListener  : Started listener bound to [localhost:9998]
+2022-07-11 13:21:51.580  INFO 58388 --- [main] o.g.grizzly.http.server.HttpServer       : [HttpServer] Started.
+2022-07-11 13:21:52.031  INFO 58388 --- [main] o.g.grizzly.http.server.NetworkListener  : Stopped listener bound to [localhost:9998]
+2022-07-11 13:21:52.055  INFO 58388 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-11 13:21:52.056  INFO 58388 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-07-11 13:21:52.257  INFO 58388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-07-11 13:21:52.260  INFO 58388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.

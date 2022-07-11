@@ -80,7 +80,10 @@ public class ProfessionalController {
     } catch (NoSuchElementException e) {
       return Response.status(404)
           .entity(
-              new ApplicationError(Response.Status.NOT_FOUND, "Não é possível editar, o ID informado não existe"))
+              new ApplicationError(
+                Response.Status.NOT_FOUND, 
+                "Não é possível editar, o ID informado não existe")
+              )
           .build();
     }
   }
@@ -99,7 +102,10 @@ public class ProfessionalController {
     } catch (NoSuchElementException e) {
       return Response.status(404)
           .entity(
-              new ApplicationError(Response.Status.NOT_FOUND, "Não é possível deletar, o ID informado não existe"))
+              new ApplicationError(
+                Response.Status.NOT_FOUND,
+                "Não é possível deletar, o ID informado não existe")
+              )
           .build();
     }
   }
